@@ -1,6 +1,7 @@
 # Display Coordinates in FiveM
 
-This Lua script for the FiveM game displays the player's coordinates on the screen and allows the user to turn the display on and off with the /coords command.
+This Lua script for the FiveM game displays the player's coordinates on the screen, and allows the user to toggle the display on and off with the /coords command.
+Additionally, the script displays the player's id and name above his head.
 
 ## Usage
 
