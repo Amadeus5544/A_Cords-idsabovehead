@@ -3,6 +3,10 @@
 This Lua script for the FiveM game displays the player's coordinates on the screen, and allows the user to toggle the display on and off with the /coords command.
 Additionally, the script displays the player's id and name above his head.
 
+## Update 2023. 02. 25
+
+Includes the /c-vector3 and c-vector4 commands for copying the coords to the clipboard.
+
 ## Usage
 
 To use this script in your FiveM server, follow these steps:
