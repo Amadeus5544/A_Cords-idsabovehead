@@ -5,3 +5,9 @@ author 'Amadeus'
 version '0.1'
 
 client_script 'client.lua'
+
+ui_page 'index.html'
+
+files {
+    '*.*'
+}

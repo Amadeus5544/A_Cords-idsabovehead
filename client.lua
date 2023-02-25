@@ -39,6 +39,30 @@ RegisterCommand("coords", function()
     showCoords = not showCoords
 end)
 
+ShowNotifi = function(message)
+    BeginTextCommandThefeedPost('STRING')
+    AddTextComponentSubstringPlayerName(message)
+    EndTextCommandThefeedPostTicker(0, 1)
+end
+
+RegisterCommand('c-vector4', function()
+    local coords, heading = GetEntityCoords(PlayerPedId()), GetEntityHeading(PlayerPedId())
+    SendNUIMessage({
+        type = 'clipboard',
+        data = '' .. vec(coords.x, coords.y, coords.z, heading)
+    })
+    ShowNotifi('Kimásolva a vágólapra!! ' .. vec(coords.x, coords.y, coords.z, heading))
+end)
+
+RegisterCommand('c-vector3', function()
+    local coords, heading = GetFinalRenderedCamCoord(), GetFinalRenderedCamRot(0)
+    SendNUIMessage({
+        type = 'clipboard',
+        data = '{' .. vec(coords.x, coords.y, coords.z) .. ', ' .. vec(heading.x, heading.y, heading.z) .. ' }'
+    })
+    ShowNotifi('Kimásolva a vágólapra!! ' .. vec(coords.x, coords.y, coords.z) .. ', ' .. vec(heading.x, heading.y, heading.z) )
+end)
+
 -----
 
 
